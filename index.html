@@ -4,19 +4,18 @@
 <meta charset="UTF-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 <title>عيادات الجبيهة الطبية | Jubaiha Medical Clinics</title>
-<meta name="description" content="عيادات الجبيهة الطبية — طوارئ وخدمة طبية 24 ساعة في الجبيهة، عمّان. Jubaiha Medical Clinics — 24/7 emergency and walk-in care in Al-Jubeiha, Amman." />
+<meta name="description" content="عيادات الجبيهة الطبية — إسعاف وطوارئ وعيادات على مدار الساعة في الجبيهة، عمّان. Jubaiha Medical Clinics — 24/7 emergency and walk-in care in Al-Jubeiha, Amman." />
 <meta name="theme-color" content="#7a1620" />
 
-<!-- Open Graph -->
 <meta property="og:title" content="عيادات الجبيهة الطبية | Jubaiha Medical Clinics" />
-<meta property="og:description" content="طوارئ وخدمة طبية 24 ساعة — 24/7 emergency & walk-in medical care in Al-Jubeiha, Amman." />
+<meta property="og:description" content="إسعاف وطوارئ ليلاً ونهاراً — 24/7 emergency & walk-in medical care in Al-Jubeiha, Amman." />
 <meta property="og:type" content="website" />
-<meta property="og:image" content="assets/logo.jpg" />
+<meta property="og:image" content="assets/logo.webp" />
 
-<link rel="icon" type="image/jpeg" href="assets/logo.jpg" />
+<link rel="icon" type="image/webp" href="assets/logo.webp" />
 <link rel="preconnect" href="https://fonts.googleapis.com" />
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-<link href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;600;700;800;900&family=Poppins:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
+<link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans+Arabic:wght@400;500;600;700&family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
 
 <style>
   :root{
@@ -24,10 +23,10 @@
     --maroon-dark:#5c0f18;
     --red:#b0202e;
     --red-soft:#c8313f;
-    --ink:#20161a;
+    --ink:#241a1c;
     --muted:#6c5c60;
     --bg:#ffffff;
-    --bg-soft:#fbf5f4;
+    --bg-soft:#fbf6f5;
     --bg-tint:#f6e9e8;
     --line:#efdedc;
     --wa:#25d366;
@@ -35,8 +34,8 @@
     --radius:20px;
     --shadow:0 18px 50px -22px rgba(92,15,24,.45);
     --shadow-sm:0 8px 24px -14px rgba(92,15,24,.4);
-    --ff-ar:'Cairo',system-ui,sans-serif;
-    --ff-en:'Poppins',system-ui,sans-serif;
+    --ff-ar:'IBM Plex Sans Arabic',system-ui,'Segoe UI',sans-serif;
+    --ff-en:'Plus Jakarta Sans',system-ui,'Segoe UI',sans-serif;
   }
 
   *{box-sizing:border-box;margin:0;padding:0}
@@ -45,17 +44,18 @@
     font-family:var(--ff-ar);
     color:var(--ink);
     background:var(--bg);
-    line-height:1.7;
+    line-height:1.8;
     -webkit-font-smoothing:antialiased;
     overflow-x:hidden;
   }
-  html[lang="en"] body{font-family:var(--ff-en)}
+  html[lang="en"] body{font-family:var(--ff-en);line-height:1.7}
   a{text-decoration:none;color:inherit}
   img{max-width:100%;display:block}
+  h1,h2,h3{text-wrap:balance;letter-spacing:-.01em}
   section{padding:88px 0}
   .wrap{width:min(1120px,92%);margin-inline:auto}
 
-  /* language visibility — revert keeps each element's natural display (block h1/p, inline span) */
+  /* language visibility — revert keeps each element's natural display */
   .en{display:none}
   html[lang="en"] .ar{display:none}
   html[lang="en"] .en{display:revert}
@@ -73,6 +73,7 @@
   .btn-outline:hover{background:rgba(255,255,255,.14);border-color:#fff}
   .btn-ghost{background:var(--bg-tint);color:var(--maroon)}
   .btn-ghost:hover{background:var(--line)}
+  a:focus-visible,button:focus-visible{outline:3px solid var(--red-soft);outline-offset:3px;border-radius:6px}
 
   /* ---------- Header ---------- */
   header{
@@ -85,7 +86,7 @@
   .brand{display:flex;align-items:center;gap:.7rem;font-weight:800}
   .brand img{width:46px;height:46px;border-radius:12px}
   .brand>div{display:flex;flex-direction:column}
-  .brand b{font-size:1.05rem;color:var(--maroon);line-height:1.2}
+  .brand b{font-size:1.05rem;color:var(--maroon);line-height:1.25}
   .brand span{font-size:.72rem;color:var(--muted);font-weight:600}
   .nav-links{display:flex;align-items:center;gap:1.6rem}
   .nav-links a{font-weight:600;color:var(--ink);font-size:.98rem;transition:color .2s}
@@ -122,7 +123,7 @@
     background:
       radial-gradient(1200px 500px at 80% -10%,rgba(176,32,46,.55),transparent 60%),
       linear-gradient(140deg,var(--maroon-dark),var(--maroon) 55%,#8f1c27);
-    color:#fff;padding:96px 0 110px;overflow:hidden;
+    color:#fff;padding:96px 0 130px;overflow:hidden;
   }
   .hero::after{
     content:"";position:absolute;inset:0;pointer-events:none;
@@ -136,32 +137,33 @@
   }
   .pulse{width:9px;height:9px;border-radius:50%;background:#41e37a;box-shadow:0 0 0 0 rgba(65,227,122,.7);animation:pulse 2s infinite}
   @keyframes pulse{70%{box-shadow:0 0 0 10px rgba(65,227,122,0)}100%{box-shadow:0 0 0 0 rgba(65,227,122,0)}}
-  .hero h1{font-size:clamp(2.1rem,5vw,3.4rem);line-height:1.2;font-weight:900;margin-bottom:1rem}
-  .hero p.lead{font-size:clamp(1.02rem,2.2vw,1.22rem);opacity:.94;max-width:46ch;margin-bottom:1.9rem}
+  .hero h1{font-size:clamp(2.1rem,5vw,3.35rem);line-height:1.25;font-weight:800;margin-bottom:1rem}
+  .hero p.lead{font-size:clamp(1.02rem,2.2vw,1.2rem);opacity:.94;max-width:48ch;margin-bottom:1.9rem}
   .hero-actions{display:flex;gap:.9rem;flex-wrap:wrap}
-  .hero-stats{display:flex;gap:2rem;margin-top:2.4rem;flex-wrap:wrap}
-  .hero-stats .num{font-size:1.7rem;font-weight:900;line-height:1}
+  .hero-stats{display:flex;gap:2.4rem;margin-top:2.4rem;flex-wrap:wrap}
+  .hero-stats .num{font-size:1.7rem;font-weight:800;line-height:1;font-variant-numeric:tabular-nums}
   .hero-stats small{opacity:.85;font-weight:600}
+  .hero-stats>div{display:flex;flex-direction:column;gap:.35rem}
   .hero-visual{display:flex;justify-content:center}
   .logo-card{
     background:#fff;border-radius:32px;padding:2.4rem;box-shadow:0 40px 80px -30px rgba(0,0,0,.5);
     max-width:340px;width:100%;text-align:center;
   }
-  .logo-card img{width:100%;max-width:250px;margin:0 auto}
-  .logo-card .oc{margin-top:1rem;display:inline-flex;align-items:center;gap:.5rem;color:var(--wa-dark);font-weight:800}
+  .logo-card img{width:100%;max-width:240px;margin:0 auto}
+  .logo-card .oc{margin-top:1rem;display:inline-flex;align-items:center;gap:.5rem;color:var(--wa-dark);font-weight:700}
   .hero-wave{position:absolute;bottom:-1px;left:0;width:100%;z-index:2;line-height:0}
   @media(max-width:860px){
     .hero-grid{grid-template-columns:1fr;text-align:center}
     .hero p.lead{margin-inline:auto}
     .hero-actions,.hero-stats{justify-content:center}
     .hero-visual{order:-1}
-    .logo-card{max-width:260px;padding:1.8rem}
+    .logo-card{max-width:250px;padding:1.8rem}
   }
 
   /* ---------- Section heading ---------- */
-  .head{text-align:center;max-width:640px;margin:0 auto 3rem}
-  .eyebrow{color:var(--red);font-weight:800;letter-spacing:.06em;text-transform:uppercase;font-size:.85rem}
-  .head h2{font-size:clamp(1.7rem,3.6vw,2.4rem);font-weight:900;color:var(--maroon);margin:.4rem 0 .6rem}
+  .head{text-align:center;max-width:660px;margin:0 auto 3rem}
+  .eyebrow{color:var(--red);font-weight:700;letter-spacing:.08em;text-transform:uppercase;font-size:.82rem}
+  .head h2{font-size:clamp(1.7rem,3.6vw,2.35rem);font-weight:800;color:var(--maroon);margin:.5rem 0 .7rem}
   .head p{color:var(--muted)}
 
   /* ---------- Trust bar ---------- */
@@ -188,7 +190,7 @@
     background:var(--bg-tint);color:var(--maroon);margin-bottom:1.1rem;
   }
   .card .ico svg{width:30px;height:30px}
-  .card h3{color:var(--maroon);font-size:1.2rem;margin-bottom:.5rem;font-weight:800}
+  .card h3{color:var(--maroon);font-size:1.2rem;margin-bottom:.5rem;font-weight:700}
   .card p{color:var(--muted);font-size:.96rem}
   @media(max-width:860px){.cards{grid-template-columns:repeat(2,1fr)}}
   @media(max-width:560px){.cards{grid-template-columns:1fr}}
@@ -201,12 +203,12 @@
     color:#fff;padding:2.6rem;box-shadow:var(--shadow);position:relative;overflow:hidden;
   }
   .about-media img{width:150px;background:#fff;border-radius:20px;padding:1rem;margin-bottom:1.4rem}
-  .about-media h3{font-size:1.5rem;font-weight:900;margin-bottom:.4rem}
+  .about-media h3{font-size:1.5rem;font-weight:800;margin-bottom:.4rem}
   .about-media .est{opacity:.85;font-weight:700}
   .about-list{list-style:none;display:grid;gap:1.1rem;margin-top:1.6rem}
   .about-list li{display:flex;gap:.8rem;align-items:flex-start}
   .about-list li>div{display:flex;flex-direction:column}
-  .about-list svg{width:24px;height:24px;color:var(--red);flex:none;margin-top:3px}
+  .about-list svg{width:24px;height:24px;color:var(--red);flex:none;margin-top:4px}
   .about-list b{color:var(--maroon)}
   .about-list span{color:var(--muted);font-size:.95rem}
   @media(max-width:860px){.about-grid{grid-template-columns:1fr;gap:2rem}}
@@ -216,13 +218,13 @@
     background:
       radial-gradient(900px 400px at 20% 0%,rgba(176,32,46,.5),transparent 60%),
       linear-gradient(135deg,var(--maroon-dark),var(--maroon));
-    color:#fff;border-radius:0;text-align:center;
+    color:#fff;text-align:center;
   }
   .booking .wrap{max-width:720px}
-  .booking h2{font-size:clamp(1.8rem,4vw,2.6rem);font-weight:900;margin-bottom:.8rem}
+  .booking h2{font-size:clamp(1.8rem,4vw,2.55rem);font-weight:800;margin-bottom:.8rem}
   .booking p{opacity:.92;font-size:1.1rem;margin-bottom:2rem}
   .booking .btn-wa{font-size:1.12rem;padding:1.1rem 2.2rem}
-  .booking .note{margin-top:1.2rem;opacity:.8;font-size:.9rem}
+  .booking .note{margin-top:1.2rem;opacity:.85;font-size:.95rem}
 
   /* ---------- Contact ---------- */
   .contact-grid{display:grid;grid-template-columns:1fr 1fr;gap:2.2rem;align-items:stretch}
@@ -236,9 +238,10 @@
   .c-item .ci svg{width:24px;height:24px}
   .c-item div:not(.ci){display:flex;flex-direction:column;justify-content:center}
   .c-item small{color:var(--muted);font-size:.8rem;font-weight:600}
-  .c-item b{color:var(--ink);font-weight:700;font-size:1rem;direction:ltr;unicode-bidi:plaintext}
-  .map-frame{border-radius:18px;overflow:hidden;border:1px solid var(--line);min-height:340px;box-shadow:var(--shadow-sm)}
-  .map-frame iframe{width:100%;height:100%;min-height:340px;border:0}
+  .c-item b{color:var(--ink);font-weight:700;font-size:1rem}
+  .c-item b.ltr{direction:ltr;unicode-bidi:plaintext}
+  .map-frame{border-radius:18px;overflow:hidden;border:1px solid var(--line);min-height:360px;box-shadow:var(--shadow-sm)}
+  .map-frame iframe{width:100%;height:100%;min-height:360px;border:0;display:block}
   @media(max-width:860px){.contact-grid{grid-template-columns:1fr}}
 
   /* ---------- Footer ---------- */
@@ -247,7 +250,7 @@
   .foot-brand{display:flex;align-items:center;gap:.8rem;margin-bottom:1rem}
   .foot-brand img{width:52px;height:52px;border-radius:12px;background:#fff;padding:3px}
   .foot-brand b{font-size:1.15rem}
-  footer p{opacity:.8;font-size:.95rem}
+  footer p{opacity:.82;font-size:.95rem}
   .foot-col{display:flex;flex-direction:column;align-items:flex-start}
   .foot-col h4{margin-bottom:1rem;font-size:1.05rem}
   .foot-col a{opacity:.82;padding:.28rem 0;font-size:.95rem;transition:.2s}
@@ -256,7 +259,7 @@
   .socials a{width:42px;height:42px;border-radius:12px;background:rgba(255,255,255,.12);display:grid;place-items:center;transition:.2s}
   .socials a:hover{background:var(--red)}
   .socials svg{width:22px;height:22px}
-  .foot-bottom{border-top:1px solid rgba(255,255,255,.15);padding-top:1.4rem;text-align:center;font-size:.88rem;opacity:.75}
+  .foot-bottom{border-top:1px solid rgba(255,255,255,.15);padding-top:1.4rem;text-align:center;font-size:.88rem;opacity:.78}
   @media(max-width:720px){.foot-grid{grid-template-columns:1fr;gap:1.6rem;text-align:center}.foot-brand{justify-content:center}.socials{justify-content:center}.foot-col{align-items:center}}
 
   /* ---------- Floating WhatsApp ---------- */
@@ -270,9 +273,12 @@
   .fab svg{width:32px;height:32px}
   @keyframes floaty{50%{transform:translateY(-6px)}}
 
-  /* reveal */
   .reveal{opacity:0;transform:translateY(26px);transition:.7s cubic-bezier(.2,.7,.2,1)}
   .reveal.in{opacity:1;transform:none}
+  @media(prefers-reduced-motion:reduce){
+    *{animation:none!important;scroll-behavior:auto!important}
+    .reveal{opacity:1;transform:none;transition:none}
+  }
 </style>
 </head>
 <body>
@@ -280,33 +286,33 @@
 <!-- ============ HEADER ============ -->
 <header>
   <div class="wrap nav">
-    <a class="brand" href="#top">
-      <img src="assets/logo.jpg" alt="شعار عيادات الجبيهة الطبية" />
+    <a class="brand" href="#top" aria-label="عيادات الجبيهة الطبية">
+      <img src="assets/logo.webp" alt="شعار عيادات الجبيهة الطبية" width="46" height="46" />
       <div>
         <b class="ar">عيادات الجبيهة الطبية</b>
         <b class="en">Jubaiha Medical Clinics</b>
-        <span class="ar">طوارئ · خدمة 24 ساعة</span>
-        <span class="en">Emergency · 24/7 Care</span>
+        <span class="ar">إسعاف وطوارئ — ليلاً ونهاراً</span>
+        <span class="en">Emergency & Care — Day and Night</span>
       </div>
     </a>
 
     <nav class="nav-links" id="navLinks">
-      <a href="#services" class="ar">الأقسام</a><a href="#services" class="en">Departments</a>
+      <a href="#services" class="ar">خدماتنا</a><a href="#services" class="en">Services</a>
       <a href="#about" class="ar">من نحن</a><a href="#about" class="en">About</a>
       <a href="#booking" class="ar">الحجز</a><a href="#booking" class="en">Booking</a>
-      <a href="#contact" class="ar">تواصل معنا</a><a href="#contact" class="en">Contact</a>
+      <a href="#contact" class="ar">اتصل بنا</a><a href="#contact" class="en">Contact</a>
     </nav>
 
     <div class="nav-right">
-      <button class="lang-toggle" onclick="toggleLang()" aria-label="Change language">
+      <button class="lang-toggle" onclick="toggleLang()" aria-label="تغيير اللغة / Change language">
         <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" width="18" height="18"><circle cx="12" cy="12" r="10"/><path d="M2 12h20M12 2a15 15 0 0 1 0 20M12 2a15 15 0 0 0 0 20"/></svg>
         <span class="ar">EN</span><span class="en">ع</span>
       </button>
       <a class="nav-cta" href="#booking">
-        <svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2a10 10 0 0 0-8.6 15l-1.3 4.7 4.8-1.3A10 10 0 1 0 12 2Zm5.3 14.2c-.2.6-1.2 1.1-1.7 1.2-.5.1-1 .1-1.7-.1a11 11 0 0 1-5.6-4.9c-.4-.7-.7-1.5-.7-2.2 0-.8.4-1.3.6-1.5.2-.2.4-.2.6-.2h.5c.2 0 .4 0 .6.5l.7 1.7c.1.2 0 .4 0 .5l-.4.5c-.1.2-.3.3-.1.6.5.8 1 1.4 1.8 1.9.2.1.4.1.5 0l.7-.7c.2-.2.3-.2.5-.1l1.6.8c.2.1.4.2.4.3.1.1.1.6-.1 1.2Z"/></svg>
+        <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 2a10 10 0 0 0-8.6 15l-1.3 4.7 4.8-1.3A10 10 0 1 0 12 2Zm5.3 14.2c-.2.6-1.2 1.1-1.7 1.2-.5.1-1 .1-1.7-.1a11 11 0 0 1-5.6-4.9c-.4-.7-.7-1.5-.7-2.2 0-.8.4-1.3.6-1.5.2-.2.4-.2.6-.2h.5c.2 0 .4 0 .6.5l.7 1.7c.1.2 0 .4 0 .5l-.4.5c-.1.2-.3.3-.1.6.5.8 1 1.4 1.8 1.9.2.1.4.1.5 0l.7-.7c.2-.2.3-.2.5-.1l1.6.8c.2.1.4.2.4.3.1.1.1.6-.1 1.2Z"/></svg>
         <span class="ar">احجز الآن</span><span class="en">Book Now</span>
       </a>
-      <button class="menu-btn" onclick="document.getElementById('navLinks').classList.toggle('open')" aria-label="Menu">
+      <button class="menu-btn" onclick="document.getElementById('navLinks').classList.toggle('open')" aria-label="القائمة / Menu">
         <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" width="28" height="28"><path d="M4 7h16M4 12h16M4 17h16"/></svg>
       </button>
     </div>
@@ -314,41 +320,41 @@
 </header>
 
 <!-- ============ HERO ============ -->
-<section class="hero" id="top" style="padding-bottom:130px">
+<section class="hero" id="top">
   <div class="wrap hero-grid">
     <div>
-      <span class="hero-badge"><span class="pulse"></span><span class="ar">مفتوح الآن · على مدار الساعة</span><span class="en">Open Now · Around the Clock</span></span>
-      <h1 class="ar">رعاية طبية طارئة موثوقة<br/>في الجبيهة، عمّان</h1>
-      <h1 class="en">Trusted Emergency Care<br/>in Al-Jubeiha, Amman</h1>
-      <p class="lead ar">عيادات متكاملة تقدّم خدمات الطوارئ والرعاية الطبية على مدار 24 ساعة — أطفال، باطنية، جراحة، ونساء وتوليد. فريق طبي مختص جاهز لاستقبالكم دون موعد مسبق.</p>
-      <p class="lead en block">A full-service walk-in clinic offering 24-hour emergency and medical care — pediatrics, internal medicine, surgery, and OB/GYN. A specialized medical team ready to receive you, no appointment needed.</p>
+      <span class="hero-badge"><span class="pulse"></span><span class="ar">نستقبلكم الآن · على مدار الساعة</span><span class="en">Open Now · Around the Clock</span></span>
+      <h1 class="ar">طوارئ الجبيهة،<br/>قريبةٌ منك ليلاً ونهاراً</h1>
+      <h1 class="en">Emergency Care in Al-Jubeiha,<br/>Close to You Day and Night</h1>
+      <p class="lead ar">في عيادات الجبيهة الطبية نفتح أبوابنا لك في كل وقت — بفريقٍ من أطباء الطوارئ والاختصاص يستقبلك بلا موعدٍ ولا انتظار. لأن صحتك أمانة، ووقتك يهمّنا.</p>
+      <p class="lead en">At Jubaiha Medical Clinics our doors are open to you at any hour — a team of emergency and specialist doctors who see you with no appointment and no waiting. Because your health can't wait.</p>
       <div class="hero-actions">
         <a class="btn btn-wa" id="heroBook" href="#" target="_blank" rel="noopener">
-          <svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2a10 10 0 0 0-8.6 15l-1.3 4.7 4.8-1.3A10 10 0 1 0 12 2Zm5.3 14.2c-.2.6-1.2 1.1-1.7 1.2-.5.1-1 .1-1.7-.1a11 11 0 0 1-5.6-4.9c-.4-.7-.7-1.5-.7-2.2 0-.8.4-1.3.6-1.5.2-.2.4-.2.6-.2h.5c.2 0 .4 0 .6.5l.7 1.7c.1.2 0 .4 0 .5l-.4.5c-.1.2-.3.3-.1.6.5.8 1 1.4 1.8 1.9.2.1.4.1.5 0l.7-.7c.2-.2.3-.2.5-.1l1.6.8c.2.1.4.2.4.3.1.1.1.6-.1 1.2Z"/></svg>
+          <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 2a10 10 0 0 0-8.6 15l-1.3 4.7 4.8-1.3A10 10 0 1 0 12 2Zm5.3 14.2c-.2.6-1.2 1.1-1.7 1.2-.5.1-1 .1-1.7-.1a11 11 0 0 1-5.6-4.9c-.4-.7-.7-1.5-.7-2.2 0-.8.4-1.3.6-1.5.2-.2.4-.2.6-.2h.5c.2 0 .4 0 .6.5l.7 1.7c.1.2 0 .4 0 .5l-.4.5c-.1.2-.3.3-.1.6.5.8 1 1.4 1.8 1.9.2.1.4.1.5 0l.7-.7c.2-.2.3-.2.5-.1l1.6.8c.2.1.4.2.4.3.1.1.1.6-.1 1.2Z"/></svg>
           <span class="ar">احجز عبر واتساب</span><span class="en">Book on WhatsApp</span>
         </a>
         <a class="btn btn-outline" href="tel:+962795762673">
-          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 16.9v3a2 2 0 0 1-2.2 2 19.8 19.8 0 0 1-8.6-3 19.5 19.5 0 0 1-6-6 19.8 19.8 0 0 1-3-8.7A2 2 0 0 1 4.1 2h3a2 2 0 0 1 2 1.7c.1 1 .4 1.9.7 2.8a2 2 0 0 1-.5 2.1L8.1 9.9a16 16 0 0 0 6 6l1.3-1.3a2 2 0 0 1 2.1-.4c.9.3 1.8.6 2.8.7a2 2 0 0 1 1.7 2Z"/></svg>
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M22 16.9v3a2 2 0 0 1-2.2 2 19.8 19.8 0 0 1-8.6-3 19.5 19.5 0 0 1-6-6 19.8 19.8 0 0 1-3-8.7A2 2 0 0 1 4.1 2h3a2 2 0 0 1 2 1.7c.1 1 .4 1.9.7 2.8a2 2 0 0 1-.5 2.1L8.1 9.9a16 16 0 0 0 6 6l1.3-1.3a2 2 0 0 1 2.1-.4c.9.3 1.8.6 2.8.7a2 2 0 0 1 1.7 2Z"/></svg>
           <span class="ar">اتصل بنا</span><span class="en">Call Us</span>
         </a>
       </div>
       <div class="hero-stats">
-        <div><div class="num">24/7</div><small class="ar">خدمة متواصلة</small><small class="en">Always open</small></div>
-        <div><div class="num">2020</div><small class="ar">نخدمكم منذ</small><small class="en">Serving since</small></div>
-        <div><div class="num">7.4K+</div><small class="ar">متابع يثق بنا</small><small class="en">Trusting followers</small></div>
+        <div><span class="num">24/7</span><small class="ar">خدمة لا تتوقف</small><small class="en">Always open</small></div>
+        <div><span class="num">2020</span><small class="ar">في خدمتكم منذ</small><small class="en">Serving since</small></div>
+        <div><span class="num">+7.4K</span><small class="ar">يتابعوننا ويثقون بنا</small><small class="en">Trust us online</small></div>
       </div>
     </div>
     <div class="hero-visual">
       <div class="logo-card">
-        <img src="assets/logo.jpg" alt="عيادات الجبيهة الطبية" />
+        <img src="assets/logo.webp" alt="عيادات الجبيهة الطبية" width="240" height="240" />
         <div class="oc">
-          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" width="20" height="20"><path d="M20 6 9 17l-5-5"/></svg>
-          <span class="ar">دون موعد مسبق</span><span class="en">Walk-ins welcome</span>
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" width="20" height="20" aria-hidden="true"><path d="M20 6 9 17l-5-5"/></svg>
+          <span class="ar">استقبال فوري بلا موعد</span><span class="en">Walk-ins welcome</span>
         </div>
       </div>
     </div>
   </div>
-  <div class="hero-wave">
+  <div class="hero-wave" aria-hidden="true">
     <svg viewBox="0 0 1440 90" preserveAspectRatio="none" style="width:100%;height:70px"><path fill="#ffffff" d="M0,60 C360,10 1080,110 1440,40 L1440,90 L0,90 Z"/></svg>
   </div>
 </section>
@@ -357,20 +363,20 @@
 <div class="trust">
   <div class="wrap trust-grid">
     <div class="trust-item reveal">
-      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="9"/><path d="M12 7v5l3 2"/></svg>
-      <div><b class="ar">24 ساعة</b><b class="en">24 Hours</b><span class="ar">مفتوح كل أيام الأسبوع</span><span class="en">Open every day</span></div>
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><circle cx="12" cy="12" r="9"/><path d="M12 7v5l3 2"/></svg>
+      <div><b class="ar">مفتوحون 24 ساعة</b><b class="en">Open 24 Hours</b><span class="ar">طوال أيام الأسبوع</span><span class="en">Every day of the week</span></div>
     </div>
     <div class="trust-item reveal">
-      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 12h-4l-3 9L9 3l-3 9H2"/></svg>
-      <div><b class="ar">طوارئ</b><b class="en">Emergency</b><span class="ar">استجابة سريعة</span><span class="en">Rapid response</span></div>
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M22 12h-4l-3 9L9 3l-3 9H2"/></svg>
+      <div><b class="ar">إسعاف وطوارئ</b><b class="en">Emergency</b><span class="ar">استجابة سريعة عند الحاجة</span><span class="en">Fast response when it counts</span></div>
     </div>
     <div class="trust-item reveal">
-      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M16 21v-2a4 4 0 0 0-4-4H6a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M22 21v-2a4 4 0 0 0-3-3.87M16 3.13a4 4 0 0 1 0 7.75"/></svg>
-      <div><b class="ar">فريق مختص</b><b class="en">Expert Team</b><span class="ar">أطباء طوارئ</span><span class="en">ER physicians</span></div>
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M16 21v-2a4 4 0 0 0-4-4H6a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M22 21v-2a4 4 0 0 0-3-3.87M16 3.13a4 4 0 0 1 0 7.75"/></svg>
+      <div><b class="ar">فريق مختص</b><b class="en">Expert Team</b><span class="ar">أطباء تثق بخبرتهم</span><span class="en">Doctors you can trust</span></div>
     </div>
     <div class="trust-item reveal">
-      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M9 12l2 2 4-4"/><path d="M21 12c0 5-3.5 7.5-8.5 9C7.5 19.5 4 17 4 12V6l8-3 8 3z"/></svg>
-      <div><b class="ar">موثوق</b><b class="en">Trusted</b><span class="ar">تقييم 100٪</span><span class="en">100% recommend</span></div>
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M9 12l2 2 4-4"/><path d="M21 12c0 5-3.5 7.5-8.5 9C7.5 19.5 4 17 4 12V6l8-3 8 3z"/></svg>
+      <div><b class="ar">محل ثقة</b><b class="en">Trusted</b><span class="ar">يوصي بنا مراجعونا</span><span class="en">Recommended by patients</span></div>
     </div>
   </div>
 </div>
@@ -379,48 +385,48 @@
 <section id="services">
   <div class="wrap">
     <div class="head reveal">
-      <div class="eyebrow"><span class="ar">أقسامنا الطبية</span><span class="en">Our Departments</span></div>
-      <h2 class="ar">رعاية شاملة تحت سقف واحد</h2>
-      <h2 class="en">Comprehensive Care Under One Roof</h2>
-      <p class="ar">نغطي احتياجاتك الطبية الطارئة والاعتيادية باختصاصات متعددة وفريق متكامل.</p>
-      <p class="en">Covering your emergency and everyday medical needs across multiple specialties.</p>
+      <div class="eyebrow"><span class="ar">خدماتنا الطبية</span><span class="en">Our Services</span></div>
+      <h2 class="ar">كل ما تحتاجه عائلتك في مكانٍ واحد</h2>
+      <h2 class="en">Everything Your Family Needs, in One Place</h2>
+      <p class="ar">من الحالة الطارئة إلى المتابعة اليومية، نرافقك بخدماتٍ متعددة وفريقٍ يهتم لأمرك.</p>
+      <p class="en">From urgent emergencies to everyday follow-ups, we care for you across every specialty.</p>
     </div>
     <div class="cards">
       <div class="card reveal">
-        <div class="ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 12h-4l-3 9L9 3l-3 9H2"/></svg></div>
+        <div class="ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M22 12h-4l-3 9L9 3l-3 9H2"/></svg></div>
         <h3 class="ar">الطوارئ والإسعاف</h3><h3 class="en">Emergency & First Aid</h3>
-        <p class="ar">استقبال الحالات الطارئة على مدار الساعة مع استجابة سريعة وعناية فورية.</p>
-        <p class="en">Round-the-clock emergency intake with rapid response and immediate care.</p>
+        <p class="ar">نستقبل الحالات الطارئة في أي وقت، باستجابةٍ سريعة وعنايةٍ تُشعرك بالطمأنينة.</p>
+        <p class="en">We receive urgent cases at any hour, with fast response and care that puts you at ease.</p>
       </div>
       <div class="card reveal">
-        <div class="ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M9 12h6M12 9v6"/><circle cx="12" cy="12" r="9"/></svg></div>
+        <div class="ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M9 12h6M12 9v6"/><circle cx="12" cy="12" r="9"/></svg></div>
         <h3 class="ar">الطب الباطني</h3><h3 class="en">Internal Medicine</h3>
-        <p class="ar">تشخيص وعلاج الأمراض الباطنية المزمنة والحادة لدى البالغين.</p>
-        <p class="en">Diagnosis and treatment of acute and chronic conditions in adults.</p>
+        <p class="ar">تشخيصٌ ومتابعة لأمراض البالغين، من الحالات المزمنة إلى الطارئة، بخبرةٍ نثق بها.</p>
+        <p class="en">Diagnosis and follow-up for adults — from chronic conditions to acute ones — with trusted expertise.</p>
       </div>
       <div class="card reveal">
-        <div class="ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M8 2v4M16 2v4M12 11a4 4 0 0 0-4 4v6h8v-6a4 4 0 0 0-4-4Z"/><path d="M12 11V6"/></svg></div>
+        <div class="ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M8 2v4M16 2v4M12 11a4 4 0 0 0-4 4v6h8v-6a4 4 0 0 0-4-4Z"/><path d="M12 11V6"/></svg></div>
         <h3 class="ar">طب الأطفال</h3><h3 class="en">Pediatrics</h3>
-        <p class="ar">رعاية صحية متخصصة للأطفال والرضّع بأيدٍ خبيرة وحنونة.</p>
-        <p class="en">Specialized, gentle healthcare for children and infants.</p>
+        <p class="ar">رعايةٌ لطيفة ودقيقة لأطفالك ورُضّعك، لأنهم أغلى ما لديك.</p>
+        <p class="en">Gentle, careful attention for your children and infants — the ones who matter most.</p>
       </div>
       <div class="card reveal">
-        <div class="ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M14.5 2 12 5 9.5 2"/><path d="M12 5v9a4 4 0 1 0 4 4"/><circle cx="16" cy="18" r="2"/></svg></div>
+        <div class="ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M14.5 2 12 5 9.5 2"/><path d="M12 5v9a4 4 0 1 0 4 4"/><circle cx="16" cy="18" r="2"/></svg></div>
         <h3 class="ar">الجراحة</h3><h3 class="en">Surgery</h3>
-        <p class="ar">تقييم جراحي وإجراءات علاجية على يد أطباء ذوي خبرة.</p>
-        <p class="en">Surgical assessment and procedures by experienced doctors.</p>
+        <p class="ar">تقييمٌ ومتابعة جراحية على يد أطباء أصحاب خبرة، بأمانٍ واحتراف.</p>
+        <p class="en">Surgical assessment and follow-up by experienced doctors, safely and professionally.</p>
       </div>
       <div class="card reveal">
-        <div class="ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="8" r="5"/><path d="M12 13v8M9 18h6"/></svg></div>
+        <div class="ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><circle cx="12" cy="8" r="5"/><path d="M12 13v8M9 18h6"/></svg></div>
         <h3 class="ar">النساء والتوليد</h3><h3 class="en">Obstetrics & Gynecology</h3>
-        <p class="ar">رعاية صحية شاملة للمرأة ومتابعة الحمل والولادة.</p>
-        <p class="en">Comprehensive women's health, pregnancy and delivery care.</p>
+        <p class="ar">رعايةٌ شاملة لصحة المرأة، ومرافقةٌ لكِ في رحلة الحمل والولادة.</p>
+        <p class="en">Comprehensive women's health, and support through every step of pregnancy and delivery.</p>
       </div>
       <div class="card reveal">
-        <div class="ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M3 12h4l2 5 4-12 2 7h6"/></svg></div>
-        <h3 class="ar">عيادة دون موعد</h3><h3 class="en">Walk-In Clinic</h3>
-        <p class="ar">تعال في أي وقت — لا حاجة لموعد مسبق، نستقبلك فوراً.</p>
-        <p class="en">Come anytime — no appointment required, we see you right away.</p>
+        <div class="ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M3 12h4l2 5 4-12 2 7h6"/></svg></div>
+        <h3 class="ar">عيادةٌ بلا موعد</h3><h3 class="en">Walk-In Clinic</h3>
+        <p class="ar">تعال في الوقت الذي يناسبك — لا مواعيد ولا انتظار، نستقبلك فور وصولك.</p>
+        <p class="en">Come whenever suits you — no appointments, no waiting. We see you the moment you arrive.</p>
       </div>
     </div>
   </div>
@@ -430,25 +436,25 @@
 <section class="about" id="about">
   <div class="wrap about-grid">
     <div class="about-media reveal">
-      <img src="assets/logo.jpg" alt="عيادات الجبيهة الطبية" />
+      <img src="assets/logo.webp" alt="عيادات الجبيهة الطبية" width="150" height="150" />
       <h3 class="ar">عيادات الجبيهة الطبية</h3><h3 class="en">Jubaiha Medical Clinics</h3>
       <div class="est ar">إسعاف وطوارئ · منذ 2020</div>
       <div class="est en">Emergency & First Aid · Since 2020</div>
-      <p style="opacity:.9;margin-top:1rem" class="ar">«طوارئ الجبيهة ليلاً ونهاراً» — نخدمكم 24 ساعة على مدار الأسبوع.</p>
-      <p style="opacity:.9;margin-top:1rem" class="en">"Jubaiha emergency, day and night" — serving you 24 hours, all week.</p>
+      <p style="opacity:.92;margin-top:1rem" class="ar">«طوارئ الجبيهة ليلاً ونهاراً» — شعارٌ نعيشه كل يوم، ونحن معكم على مدار الأسبوع.</p>
+      <p style="opacity:.92;margin-top:1rem" class="en">"Jubaiha emergency, day and night" — a promise we live by, with you all week long.</p>
     </div>
     <div>
       <div class="eyebrow"><span class="ar">من نحن</span><span class="en">About Us</span></div>
-      <h2 style="color:var(--maroon);font-size:clamp(1.6rem,3.4vw,2.2rem);font-weight:900;margin:.4rem 0 1rem" class="ar">قريبون منكم عند الحاجة</h2>
-      <h2 style="color:var(--maroon);font-size:clamp(1.6rem,3.4vw,2.2rem);font-weight:900;margin:.4rem 0 1rem" class="en">Close to You When It Matters</h2>
-      <p class="ar" style="color:var(--muted)">تقع عيادات الجبيهة الطبية على شارع الياجوز في الجبيهة بعمّان، وتقدّم منذ عام 2020 خدمات رعاية طارئة متكاملة. فريقنا من أطباء الطوارئ ملتزم بتقديم عناية فورية ومهنية لكل احتياجاتكم الصحية العاجلة.</p>
-      <p class="en" style="color:var(--muted)">Located on Yajouz Road in Al-Jubeiha, Amman, Jubaiha Medical Clinics has provided comprehensive emergency care since 2020. Our team of emergency physicians is committed to prompt, professional attention for all your urgent health needs.</p>
+      <h2 style="color:var(--maroon);font-size:clamp(1.6rem,3.4vw,2.2rem);font-weight:800;margin:.5rem 0 1rem" class="ar">معك في كل لحظة تحتاج فيها</h2>
+      <h2 style="color:var(--maroon);font-size:clamp(1.6rem,3.4vw,2.2rem);font-weight:800;margin:.5rem 0 1rem" class="en">With You in Every Moment That Matters</h2>
+      <p class="ar" style="color:var(--muted)">على شارع الياجوز في الجبيهة، فتحنا أبوابنا عام 2020 لنكون قريبين منك. منذ ذلك الحين، نستقبل مراجعينا بفريقٍ من أطباء الطوارئ يؤمن أن الرعاية السريعة والصادقة حقٌّ لكل مريض. هنا لا تنتظر طويلاً، ولا تشعر يوماً أنك غريب.</p>
+      <p class="en" style="color:var(--muted)">On Yajouz Road in Al-Jubeiha, we opened our doors in 2020 to be close to you. Ever since, our team of emergency doctors has believed that fast, honest care is every patient's right. Here you won't wait long — and you'll never feel like a stranger.</p>
       <ul class="about-list">
-        <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M20 6 9 17l-5-5"/></svg><div><b class="ar">مفتوح 24 ساعة</b><b class="en">Open 24 hours</b><span class="ar">طوال أيام الأسبوع دون انقطاع.</span><span class="en">Every day, without interruption.</span></div></li>
-        <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M20 6 9 17l-5-5"/></svg><div><b class="ar">اختصاصات متعددة</b><b class="en">Multiple specialties</b><span class="ar">أطفال، باطنية، جراحة، ونساء وتوليد.</span><span class="en">Pediatrics, internal medicine, surgery, OB/GYN.</span></div></li>
-        <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M20 6 9 17l-5-5"/></svg><div><b class="ar">دون موعد مسبق</b><b class="en">No appointment needed</b><span class="ar">استقبال فوري للمراجعين والحالات الطارئة.</span><span class="en">Immediate intake for walk-ins and emergencies.</span></div></li>
+        <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M20 6 9 17l-5-5"/></svg><div><b class="ar">أبوابنا مفتوحة دائماً</b><b class="en">Always open</b><span class="ar">ليلاً ونهاراً، طوال أيام الأسبوع.</span><span class="en">Day and night, every day of the week.</span></div></li>
+        <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M20 6 9 17l-5-5"/></svg><div><b class="ar">تخصصاتٌ لكل العائلة</b><b class="en">Care for the whole family</b><span class="ar">أطفال، باطنية، جراحة، ونساء وتوليد.</span><span class="en">Pediatrics, internal medicine, surgery, OB/GYN.</span></div></li>
+        <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M20 6 9 17l-5-5"/></svg><div><b class="ar">بلا مواعيد ولا تعقيد</b><b class="en">No appointments, no hassle</b><span class="ar">تعال وقت ما تحتاج، ونحن باستقبالك.</span><span class="en">Come when you need to — we're ready for you.</span></div></li>
       </ul>
-      <a class="btn btn-ghost" style="margin-top:1.6rem" href="#booking"><span class="ar">احجز موعدك الآن ←</span><span class="en">Book your visit now →</span></a>
+      <a class="btn btn-ghost" style="margin-top:1.6rem" href="#booking"><span class="ar">احجز موعدك الآن</span><span class="en">Book your visit</span></a>
     </div>
   </div>
 </section>
@@ -457,15 +463,15 @@
 <section class="booking" id="booking">
   <div class="wrap">
     <h2 class="ar">احجز موعدك عبر واتساب</h2>
-    <h2 class="en">Book Your Appointment on WhatsApp</h2>
-    <p class="ar">اضغط الزر أدناه وسيتم فتح محادثة واتساب برسالة جاهزة — أرسلها وسيتواصل معك فريقنا لتأكيد موعدك في الحال.</p>
-    <p class="en">Tap the button below to open WhatsApp with a ready-made message — send it and our team will confirm your appointment right away.</p>
+    <h2 class="en">Book Your Visit on WhatsApp</h2>
+    <p class="ar">اضغط الزر، وستفتح لك محادثة واتساب برسالةٍ جاهزة. أرسلها كما هي، وسيردّ عليك فريقنا لتأكيد موعدك بأسرع وقت.</p>
+    <p class="en">Tap the button and WhatsApp opens with a ready-made message. Send it as it is, and our team will reply to confirm your visit as soon as possible.</p>
     <a class="btn btn-wa" id="mainBook" href="#" target="_blank" rel="noopener">
-      <svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2a10 10 0 0 0-8.6 15l-1.3 4.7 4.8-1.3A10 10 0 1 0 12 2Zm5.3 14.2c-.2.6-1.2 1.1-1.7 1.2-.5.1-1 .1-1.7-.1a11 11 0 0 1-5.6-4.9c-.4-.7-.7-1.5-.7-2.2 0-.8.4-1.3.6-1.5.2-.2.4-.2.6-.2h.5c.2 0 .4 0 .6.5l.7 1.7c.1.2 0 .4 0 .5l-.4.5c-.1.2-.3.3-.1.6.5.8 1 1.4 1.8 1.9.2.1.4.1.5 0l.7-.7c.2-.2.3-.2.5-.1l1.6.8c.2.1.4.2.4.3.1.1.1.6-.1 1.2Z"/></svg>
+      <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 2a10 10 0 0 0-8.6 15l-1.3 4.7 4.8-1.3A10 10 0 1 0 12 2Zm5.3 14.2c-.2.6-1.2 1.1-1.7 1.2-.5.1-1 .1-1.7-.1a11 11 0 0 1-5.6-4.9c-.4-.7-.7-1.5-.7-2.2 0-.8.4-1.3.6-1.5.2-.2.4-.2.6-.2h.5c.2 0 .4 0 .6.5l.7 1.7c.1.2 0 .4 0 .5l-.4.5c-.1.2-.3.3-.1.6.5.8 1 1.4 1.8 1.9.2.1.4.1.5 0l.7-.7c.2-.2.3-.2.5-.1l1.6.8c.2.1.4.2.4.3.1.1.1.6-.1 1.2Z"/></svg>
       <span class="ar">احجز الآن عبر واتساب</span><span class="en">Book Now on WhatsApp</span>
     </a>
-    <div class="note ar">أو اتصل مباشرة: <a href="tel:+962795762673" style="color:#fff;font-weight:800;direction:ltr;display:inline-block">+962 7 9576 2673</a></div>
-    <div class="note en">Or call us directly: <a href="tel:+962795762673" style="color:#fff;font-weight:800">+962 7 9576 2673</a></div>
+    <div class="note ar">أو اتصل بنا مباشرة: <a href="tel:+962795762673" style="color:#fff;font-weight:700;direction:ltr;display:inline-block">+962 7 9576 2673</a></div>
+    <div class="note en">Or just call us: <a href="tel:+962795762673" style="color:#fff;font-weight:700">+962 7 9576 2673</a></div>
   </div>
 </section>
 
@@ -475,35 +481,35 @@
     <div class="head reveal">
       <div class="eyebrow"><span class="ar">تواصل معنا</span><span class="en">Get in Touch</span></div>
       <h2 class="ar">نحن هنا من أجلك</h2><h2 class="en">We're Here for You</h2>
-      <p class="ar">زُرنا في الجبيهة أو تواصل معنا عبر أي من القنوات التالية.</p>
-      <p class="en">Visit us in Al-Jubeiha or reach out through any of the channels below.</p>
+      <p class="ar">زُرنا في الجبيهة، أو تواصل معنا بالطريقة التي تناسبك.</p>
+      <p class="en">Visit us in Al-Jubeiha, or reach us whichever way suits you best.</p>
     </div>
     <div class="contact-grid">
       <div class="contact-list">
         <a class="c-item" id="waItem" href="#" target="_blank" rel="noopener">
-          <div class="ci"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2a10 10 0 0 0-8.6 15l-1.3 4.7 4.8-1.3A10 10 0 1 0 12 2Zm5.3 14.2c-.2.6-1.2 1.1-1.7 1.2-.5.1-1 .1-1.7-.1a11 11 0 0 1-5.6-4.9c-.4-.7-.7-1.5-.7-2.2 0-.8.4-1.3.6-1.5.2-.2.4-.2.6-.2h.5c.2 0 .4 0 .6.5l.7 1.7c.1.2 0 .4 0 .5l-.4.5c-.1.2-.3.3-.1.6.5.8 1 1.4 1.8 1.9.2.1.4.1.5 0l.7-.7c.2-.2.3-.2.5-.1l1.6.8c.2.1.4.2.4.3.1.1.1.6-.1 1.2Z"/></svg></div>
-          <div><small class="ar">واتساب / حجز</small><small class="en">WhatsApp / Booking</small><b>+962 7 9576 2673</b></div>
+          <div class="ci"><svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 2a10 10 0 0 0-8.6 15l-1.3 4.7 4.8-1.3A10 10 0 1 0 12 2Zm5.3 14.2c-.2.6-1.2 1.1-1.7 1.2-.5.1-1 .1-1.7-.1a11 11 0 0 1-5.6-4.9c-.4-.7-.7-1.5-.7-2.2 0-.8.4-1.3.6-1.5.2-.2.4-.2.6-.2h.5c.2 0 .4 0 .6.5l.7 1.7c.1.2 0 .4 0 .5l-.4.5c-.1.2-.3.3-.1.6.5.8 1 1.4 1.8 1.9.2.1.4.1.5 0l.7-.7c.2-.2.3-.2.5-.1l1.6.8c.2.1.4.2.4.3.1.1.1.6-.1 1.2Z"/></svg></div>
+          <div><small class="ar">واتساب · للحجز</small><small class="en">WhatsApp · Booking</small><b class="ltr">+962 7 9576 2673</b></div>
         </a>
         <a class="c-item" href="tel:+962795762673">
-          <div class="ci"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 16.9v3a2 2 0 0 1-2.2 2 19.8 19.8 0 0 1-8.6-3 19.5 19.5 0 0 1-6-6 19.8 19.8 0 0 1-3-8.7A2 2 0 0 1 4.1 2h3a2 2 0 0 1 2 1.7c.1 1 .4 1.9.7 2.8a2 2 0 0 1-.5 2.1L8.1 9.9a16 16 0 0 0 6 6l1.3-1.3a2 2 0 0 1 2.1-.4c.9.3 1.8.6 2.8.7a2 2 0 0 1 1.7 2Z"/></svg></div>
-          <div><small class="ar">هاتف</small><small class="en">Phone</small><b>+962 7 9576 2673</b></div>
+          <div class="ci"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M22 16.9v3a2 2 0 0 1-2.2 2 19.8 19.8 0 0 1-8.6-3 19.5 19.5 0 0 1-6-6 19.8 19.8 0 0 1-3-8.7A2 2 0 0 1 4.1 2h3a2 2 0 0 1 2 1.7c.1 1 .4 1.9.7 2.8a2 2 0 0 1-.5 2.1L8.1 9.9a16 16 0 0 0 6 6l1.3-1.3a2 2 0 0 1 2.1-.4c.9.3 1.8.6 2.8.7a2 2 0 0 1 1.7 2Z"/></svg></div>
+          <div><small class="ar">هاتف</small><small class="en">Phone</small><b class="ltr">+962 7 9576 2673</b></div>
         </a>
         <a class="c-item" href="mailto:bkh08706@gmail.com">
-          <div class="ci"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="2" y="4" width="20" height="16" rx="2"/><path d="m2 6 10 7 10-7"/></svg></div>
-          <div><small class="ar">البريد الإلكتروني</small><small class="en">Email</small><b>bkh08706@gmail.com</b></div>
+          <div class="ci"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><rect x="2" y="4" width="20" height="16" rx="2"/><path d="m2 6 10 7 10-7"/></svg></div>
+          <div><small class="ar">البريد الإلكتروني</small><small class="en">Email</small><b class="ltr">bkh08706@gmail.com</b></div>
         </a>
         <a class="c-item" href="https://www.instagram.com/clinics_emergency" target="_blank" rel="noopener">
-          <div class="ci"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="2" y="2" width="20" height="20" rx="5"/><circle cx="12" cy="12" r="4"/><circle cx="17.5" cy="6.5" r="1.2" fill="currentColor" stroke="none"/></svg></div>
-          <div><small class="ar">إنستغرام</small><small class="en">Instagram</small><b>@clinics_emergency</b></div>
+          <div class="ci"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><rect x="2" y="2" width="20" height="20" rx="5"/><circle cx="12" cy="12" r="4"/><circle cx="17.5" cy="6.5" r="1.2" fill="currentColor" stroke="none"/></svg></div>
+          <div><small class="ar">إنستغرام</small><small class="en">Instagram</small><b class="ltr">@clinics_emergency</b></div>
         </a>
-        <a class="c-item" href="https://maps.google.com/?q=Jubaiha+Medical+Clinics+Yajoz+Road+Amman" target="_blank" rel="noopener">
-          <div class="ci"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0Z"/><circle cx="12" cy="10" r="3"/></svg></div>
-          <div><small class="ar">العنوان</small><small class="en">Address</small><b class="ar" style="direction:rtl">شارع الياجوز، الجبيهة، عمّان</b><b class="en">Yajoz Rd, Jubeiha, Amman 11941</b></div>
+        <a class="c-item" href="https://maps.app.goo.gl/Qv4c1mTkDF42x75E6" target="_blank" rel="noopener">
+          <div class="ci"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0Z"/><circle cx="12" cy="10" r="3"/></svg></div>
+          <div><small class="ar">العنوان</small><small class="en">Address</small><b class="ar">شارع الياجوز، الجبيهة — بناية 128، ط1</b><b class="en">Yajouz Rd, Al-Jubeiha — Bldg 128, 1st fl.</b></div>
         </a>
       </div>
       <div class="map-frame reveal">
-        <iframe title="Map" loading="lazy" referrerpolicy="no-referrer-when-downgrade"
-          src="https://www.google.com/maps?q=Jubaiha%2C%20Yajoz%20Road%2C%20Amman%2C%20Jordan&output=embed"></iframe>
+        <iframe title="موقع عيادات الجبيهة الطبية على الخريطة" loading="lazy" referrerpolicy="no-referrer-when-downgrade"
+          src="https://www.google.com/maps?q=%D8%B9%D9%8A%D8%A7%D8%AF%D8%A7%D8%AA%20%D8%A7%D9%84%D8%AC%D8%A8%D9%8A%D9%87%D8%A9%20%D8%A7%D9%84%D8%B7%D8%A8%D9%8A%D8%A9%20%D8%A5%D8%B3%D8%B9%D8%A7%D9%81%20%D9%88%20%D8%B7%D9%88%D8%A7%D8%B1%D8%A6&ftid=0x151c9f0b25ff5fe1:0x32dd05390d39571e&z=16&output=embed"></iframe>
       </div>
     </div>
   </div>
@@ -515,32 +521,32 @@
     <div class="foot-grid">
       <div>
         <div class="foot-brand">
-          <img src="assets/logo.jpg" alt="logo" />
+          <img src="assets/logo.webp" alt="" width="52" height="52" />
           <div><b class="ar">عيادات الجبيهة الطبية</b><b class="en">Jubaiha Medical Clinics</b></div>
         </div>
-        <p class="ar">طوارئ وخدمة طبية 24 ساعة في الجبيهة، عمّان. رعاية موثوقة عندما تحتاجها.</p>
-        <p class="en">24-hour emergency & medical care in Al-Jubeiha, Amman. Trusted care when you need it.</p>
+        <p class="ar">إسعافٌ وعياداتٌ في الجبيهة، نخدمكم ليلاً ونهاراً. رعايةٌ تطمئنّ لها عائلتك.</p>
+        <p class="en">Emergency & clinics in Al-Jubeiha, serving you day and night. Care your family can rely on.</p>
         <div class="socials">
-          <a href="https://www.instagram.com/clinics_emergency" target="_blank" rel="noopener" aria-label="Instagram"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="2" y="2" width="20" height="20" rx="5"/><circle cx="12" cy="12" r="4"/><circle cx="17.5" cy="6.5" r="1.2" fill="currentColor" stroke="none"/></svg></a>
-          <a id="footWa" href="#" target="_blank" rel="noopener" aria-label="WhatsApp"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2a10 10 0 0 0-8.6 15l-1.3 4.7 4.8-1.3A10 10 0 1 0 12 2Zm5.3 14.2c-.2.6-1.2 1.1-1.7 1.2-.5.1-1 .1-1.7-.1a11 11 0 0 1-5.6-4.9c-.4-.7-.7-1.5-.7-2.2 0-.8.4-1.3.6-1.5.2-.2.4-.2.6-.2h.5c.2 0 .4 0 .6.5l.7 1.7c.1.2 0 .4 0 .5l-.4.5c-.1.2-.3.3-.1.6.5.8 1 1.4 1.8 1.9.2.1.4.1.5 0l.7-.7c.2-.2.3-.2.5-.1l1.6.8c.2.1.4.2.4.3.1.1.1.6-.1 1.2Z"/></svg></a>
-          <a href="tel:+962795762673" aria-label="Call"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 16.9v3a2 2 0 0 1-2.2 2 19.8 19.8 0 0 1-8.6-3 19.5 19.5 0 0 1-6-6 19.8 19.8 0 0 1-3-8.7A2 2 0 0 1 4.1 2h3a2 2 0 0 1 2 1.7c.1 1 .4 1.9.7 2.8a2 2 0 0 1-.5 2.1L8.1 9.9a16 16 0 0 0 6 6l1.3-1.3a2 2 0 0 1 2.1-.4c.9.3 1.8.6 2.8.7a2 2 0 0 1 1.7 2Z"/></svg></a>
+          <a href="https://www.instagram.com/clinics_emergency" target="_blank" rel="noopener" aria-label="Instagram"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><rect x="2" y="2" width="20" height="20" rx="5"/><circle cx="12" cy="12" r="4"/><circle cx="17.5" cy="6.5" r="1.2" fill="currentColor" stroke="none"/></svg></a>
+          <a id="footWa" href="#" target="_blank" rel="noopener" aria-label="WhatsApp"><svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 2a10 10 0 0 0-8.6 15l-1.3 4.7 4.8-1.3A10 10 0 1 0 12 2Zm5.3 14.2c-.2.6-1.2 1.1-1.7 1.2-.5.1-1 .1-1.7-.1a11 11 0 0 1-5.6-4.9c-.4-.7-.7-1.5-.7-2.2 0-.8.4-1.3.6-1.5.2-.2.4-.2.6-.2h.5c.2 0 .4 0 .6.5l.7 1.7c.1.2 0 .4 0 .5l-.4.5c-.1.2-.3.3-.1.6.5.8 1 1.4 1.8 1.9.2.1.4.1.5 0l.7-.7c.2-.2.3-.2.5-.1l1.6.8c.2.1.4.2.4.3.1.1.1.6-.1 1.2Z"/></svg></a>
+          <a href="tel:+962795762673" aria-label="Call"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M22 16.9v3a2 2 0 0 1-2.2 2 19.8 19.8 0 0 1-8.6-3 19.5 19.5 0 0 1-6-6 19.8 19.8 0 0 1-3-8.7A2 2 0 0 1 4.1 2h3a2 2 0 0 1 2 1.7c.1 1 .4 1.9.7 2.8a2 2 0 0 1-.5 2.1L8.1 9.9a16 16 0 0 0 6 6l1.3-1.3a2 2 0 0 1 2.1-.4c.9.3 1.8.6 2.8.7a2 2 0 0 1 1.7 2Z"/></svg></a>
         </div>
       </div>
       <div class="foot-col">
         <h4 class="ar">روابط سريعة</h4><h4 class="en">Quick Links</h4>
-        <a href="#services" class="ar">الأقسام الطبية</a><a href="#services" class="en">Departments</a>
+        <a href="#services" class="ar">خدماتنا الطبية</a><a href="#services" class="en">Our Services</a>
         <a href="#about" class="ar">من نحن</a><a href="#about" class="en">About Us</a>
-        <a href="#booking" class="ar">حجز موعد</a><a href="#booking" class="en">Book Appointment</a>
+        <a href="#booking" class="ar">حجز موعد</a><a href="#booking" class="en">Book a Visit</a>
         <a href="#contact" class="ar">تواصل معنا</a><a href="#contact" class="en">Contact</a>
       </div>
       <div class="foot-col">
-        <h4 class="ar">ساعات العمل</h4><h4 class="en">Opening Hours</h4>
-        <p class="ar" style="font-weight:700;opacity:1;color:#ffcbcf">مفتوح 24 ساعة</p>
+        <h4 class="ar">أوقات العمل</h4><h4 class="en">Opening Hours</h4>
+        <p class="ar" style="font-weight:700;opacity:1;color:#ffcbcf">مفتوحون 24 ساعة</p>
         <p class="en" style="font-weight:700;opacity:1;color:#ffcbcf">Open 24 Hours</p>
-        <p class="ar">السبت – الجمعة · طوال اليوم</p>
-        <p class="en">Saturday – Friday · All day</p>
-        <p style="margin-top:.6rem" class="ar">شارع الياجوز، الجبيهة، عمّان 11941</p>
-        <p style="margin-top:.6rem" class="en">Yajoz Rd, Jubeiha, Amman 11941</p>
+        <p class="ar">طوال أيام الأسبوع، دون انقطاع</p>
+        <p class="en">Every day, without interruption</p>
+        <p style="margin-top:.6rem" class="ar">شارع الياجوز، الجبيهة، عمّان — بناية 128</p>
+        <p style="margin-top:.6rem" class="en">Yajouz Rd, Al-Jubeiha, Amman — Bldg 128</p>
       </div>
     </div>
     <div class="foot-bottom">
@@ -551,16 +557,15 @@
 </footer>
 
 <!-- Floating WhatsApp -->
-<a class="fab" id="fabWa" href="#" target="_blank" rel="noopener" aria-label="WhatsApp">
-  <svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2a10 10 0 0 0-8.6 15l-1.3 4.7 4.8-1.3A10 10 0 1 0 12 2Zm5.3 14.2c-.2.6-1.2 1.1-1.7 1.2-.5.1-1 .1-1.7-.1a11 11 0 0 1-5.6-4.9c-.4-.7-.7-1.5-.7-2.2 0-.8.4-1.3.6-1.5.2-.2.4-.2.6-.2h.5c.2 0 .4 0 .6.5l.7 1.7c.1.2 0 .4 0 .5l-.4.5c-.1.2-.3.3-.1.6.5.8 1 1.4 1.8 1.9.2.1.4.1.5 0l.7-.7c.2-.2.3-.2.5-.1l1.6.8c.2.1.4.2.4.3.1.1.1.6-.1 1.2Z"/></svg>
+<a class="fab" id="fabWa" href="#" target="_blank" rel="noopener" aria-label="تواصل عبر واتساب / WhatsApp">
+  <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 2a10 10 0 0 0-8.6 15l-1.3 4.7 4.8-1.3A10 10 0 1 0 12 2Zm5.3 14.2c-.2.6-1.2 1.1-1.7 1.2-.5.1-1 .1-1.7-.1a11 11 0 0 1-5.6-4.9c-.4-.7-.7-1.5-.7-2.2 0-.8.4-1.3.6-1.5.2-.2.4-.2.6-.2h.5c.2 0 .4 0 .6.5l.7 1.7c.1.2 0 .4 0 .5l-.4.5c-.1.2-.3.3-.1.6.5.8 1 1.4 1.8 1.9.2.1.4.1.5 0l.7-.7c.2-.2.3-.2.5-.1l1.6.8c.2.1.4.2.4.3.1.1.1.6-.1 1.2Z"/></svg>
 </a>
 
 <script>
-  // ---- WhatsApp config ----
   var WA_NUMBER = "962795762673"; // +962 7 9576 2673
   var MSG = {
-    ar: "مرحباً عيادات الجبيهة الطبية 👋\nأرغب بحجز موعد.\n\nالاسم:\nالقسم المطلوب:\nالوقت المفضل:\n\nشكراً لكم.",
-    en: "Hello Jubaiha Medical Clinics 👋\nI'd like to book an appointment.\n\nName:\nDepartment:\nPreferred time:\n\nThank you."
+    ar: "السلام عليكم، عيادات الجبيهة الطبية 👋\nأرغب بحجز موعد، وهذه تفاصيلي:\n\n• الاسم:\n• القسم أو الشكوى:\n• الوقت المناسب:\n\nوشكراً لكم 🌟",
+    en: "Hello Jubaiha Medical Clinics 👋\nI'd like to book a visit. My details:\n\n• Name:\n• Department / concern:\n• Preferred time:\n\nThank you! 🌟"
   };
 
   function waLink(){
@@ -575,7 +580,6 @@
     });
   }
 
-  // ---- Language toggle ----
   function applyLang(lang){
     var html = document.documentElement;
     html.lang = lang;
@@ -592,18 +596,15 @@
     applyLang(saved);
   })();
 
-  // ---- Year ----
   var y = new Date().getFullYear();
   document.getElementById("yr").textContent = y;
   document.getElementById("yr2").textContent = y;
 
-  // ---- Reveal on scroll ----
   var io = new IntersectionObserver(function(entries){
     entries.forEach(function(e){ if(e.isIntersecting){ e.target.classList.add("in"); io.unobserve(e.target); } });
   }, {threshold:.12});
   document.querySelectorAll(".reveal").forEach(function(el){ io.observe(el); });
 
-  // ---- Close mobile menu on link click ----
   document.querySelectorAll("#navLinks a").forEach(function(a){
     a.addEventListener("click", function(){ document.getElementById("navLinks").classList.remove("open"); });
   });
